@@ -29,10 +29,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-    <body onload="app.init()">
-        X:<input id="x" type="number" required/>
-        Y:<input id="y" type="number" required/>
+    <body>
+        <a>Ingrese el ID del dibujo: <input type="number" id="dibujoID" placeholder="Numero del dibujo" required="true"/></a>
+        <button onclick="app.init()">Conectarse</button>
+        <br/>
+        X:<input id="x" type="number" required="true"/>
+        Y:<input id="y" type="number" required="true"/>
         <button onclick="app.publishPoint($('#x').val(),$('#y').val())">Send point</button>
+        <br/>
         <canvas id="canvas" width="800" height="600"></canvas>
     </body>
 </html>
